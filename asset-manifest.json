@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/global-warming/static/css/main.8726bedf.css",
+    "main.js": "/global-warming/static/js/main.a7d13608.js",
+    "static/js/453.ead810ba.chunk.js": "/global-warming/static/js/453.ead810ba.chunk.js",
+    "static/media/iceberg.jpg": "/global-warming/static/media/iceberg.f0913793b834409461e5.jpg",
+    "index.html": "/global-warming/index.html",
+    "main.8726bedf.css.map": "/global-warming/static/css/main.8726bedf.css.map",
+    "main.a7d13608.js.map": "/global-warming/static/js/main.a7d13608.js.map",
+    "453.ead810ba.chunk.js.map": "/global-warming/static/js/453.ead810ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8726bedf.css",
+    "static/js/main.a7d13608.js"
+  ]
+}
