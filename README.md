@@ -21,7 +21,7 @@ A multi-page web application built with React that visualizes global warming dat
 5. NO2 - Provides data for nitrous oxide emissions.
 6. Polar Ice - Displays the extent of polar ice over time.
 
-## Gettin Started
+## Getting Started
 
 Follow these steps to set up the project locally.
 
