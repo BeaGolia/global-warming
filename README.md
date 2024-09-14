@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Global Warming
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A multi-page web application built with React that visualizes global warming data using various APIs. The app provides a simple and responsive dashboard with graphs showcasing temperature changes, CO2 levels, methane emissions, NO2 emissions, and polar ice extent.
+![screenshot](image.png)
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Multi-page navigation: The application includes several pages that display data related to global warming, such as temperature trends, CO2, methane, NO2, and polar ice data.
+- API Integration: Fetches data from the Global Warming API.
+- Responsive design: Designed to work across all device sizes.
+- Charts and Graphs: Uses chart libraries to visualize data in a clear and interactive manner.
+- Simple UI/UX: An organized, easy-to-navigate interface for users to access the data.
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Home - Introduction to global warming and links to different data categories.
+2. Temperature - Displays global temperature changes over time.
+3. CO2 - Visualizes CO2 levels across the years.
+4. Methane - Shows data for methane emissions.
+5. NO2 - Provides data for nitrous oxide emissions.
+6. Polar Ice - Displays the extent of polar ice over time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Gettin Started
 
-### `npm test`
+Follow these steps to set up the project locally.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Node.js and npm installed. You can download and install them from here([here](https://nodejs.org/en/download/package-manager)).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+```git clone https://github.com/yourusername/global-warming-dashboard.git```
+```cd global-warming-dashboard```
+2. Install dependencies:
+```npm install```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Running the Application
 
-### `npm run eject`
+Start the development server:
+```npm start```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will start the app locally at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Build for Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To build the project for production:
+```npm run build```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will create a production-ready build of the app in the ```build``` folder.
 
-## Learn More
+## API Endpoints
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app fetches data from the following APIs:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Temperature: https://global-warming.org/api/temperature-api
+- CO2: https://global-warming.org/api/co2-api
+- Methane: https://global-warming.org/api/methane-api
+- NO2: https://global-warming.org/api/nitrous-oxide-api
+- Polar Ice: https://global-warming.org/api/arctic-api
 
-### Code Splitting
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To deploy on GitHub Pages:
 
-### Analyzing the Bundle Size
+1. Install gh-pages:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```npm install gh-pages --save-dev```
 
-### Making a Progressive Web App
+2. Add the following to package.json:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```"homepage": "https://yourusername.github.io/global-warming-dashboard",```
+```"scripts": {```
+ ``` "predeploy": "npm run build",```
+ ``` "deploy": "gh-pages -d build"```
+```}```
 
-### Advanced Configuration
+3. Deploy the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```npm run deploy```
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits
+Data provided by Global Warming API.
+Background information from National Geographic, Nasa and EPA.
