@@ -1,8 +1,4 @@
-// src/services/apiService.js
-
-// src/services/apiService.js
-
-const BASE_URL = 'https://global-warming.org/api/'; // Assicurati che questo URL sia corretto
+const BASE_URL = 'https://global-warming.org/api/'; 
 
 export const getCO2Data = async () => {
   try {
@@ -20,8 +16,8 @@ export const getIceData = async () => {
   try {
     const response = await fetch(`${BASE_URL}arctic-api`);
     const data = await response.json();
-    console.log(data); // Controlla cosa viene restituito
-    return data.arcticData.data || []; // Assicurati di restituire un array
+    console.log(data); 
+    return data.arcticData.data || []; 
   } catch (error) {
     console.error('Error fetching ice data:', error);
     return [];

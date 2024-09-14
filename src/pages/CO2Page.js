@@ -1,4 +1,3 @@
-// src/components/CO2.js
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';

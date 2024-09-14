@@ -1,5 +1,3 @@
-// src/pages/Home.js
-
 import { Link } from 'react-router-dom';
 import logo from '../iceberg.jpg';
 
