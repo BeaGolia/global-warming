@@ -1,4 +1,4 @@
-const BASE_URL = 'https://global-warming.org/api/'; 
+const BASE_URL = process.env.REACT_APP_BASE_URL; 
 
 export const getCO2Data = async () => {
   try {

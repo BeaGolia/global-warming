@@ -2,14 +2,23 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import Loader from '../components/Loader';
+import { Helmet } from 'react-helmet';
 
 function NO2Page() {
   const [no2Data, setNo2Data] = useState([]);
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     axios.get('https://global-warming.org/api/nitrous-oxide-api')
-      .then((response) => setNo2Data(response.data.nitrous))
-      .catch((error) => console.error(error));
+      .then((response) => {
+        setNo2Data(response.data.nitrous);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
   }, []);
 
   const chartData = {
@@ -25,10 +34,15 @@ function NO2Page() {
 
   return (
     <div>
+      <Helmet>
+        <title>NO2 Data | Global Warming Dashboard</title>
+      </Helmet>
       <h1>NO2 Data</h1>
+      {loading ? ( <Loader /> ) : (
       <div className="chart-container">
         <Line data={chartData} />
       </div>
+      )}
       <p>In 2022, nitrous oxide (N2O) accounted for 6% of all U.S. greenhouse gas emissions from human activities. Human activities such as agriculture, fuel combustion, wastewater management, and industrial processes are increasing the amount of N2O in the atmosphere. </p>
       <p>Nitrous oxide molecules stay in the atmosphere for an average of 121 years before being removed by a sink or destroyed through chemical reactions. The impact of 1 pound of N2O on warming the atmosphere is 265 times that of 1 pound of carbon dioxide.</p>
       <p>Globally, 40% of total N2O emissions come from human activities.</p>

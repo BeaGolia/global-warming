@@ -2,14 +2,23 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import Loader from '../components/Loader';
+import { Helmet } from 'react-helmet';
 
 function CO2Page() {
   const [co2Data, setCo2Data] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios.get('https://global-warming.org/api/co2-api')
-      .then((response) => setCo2Data(response.data.co2))
-      .catch((error) => console.error(error));
+      .then((response) => {
+      setCo2Data(response.data.co2);
+      setLoading(false); 
+    })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      });
   }, []);
 
   const chartData = {
@@ -25,10 +34,15 @@ function CO2Page() {
 
   return (
     <div>
+      <Helmet>
+        <title>CO2 Data | Global Warming Dashboard</title>
+      </Helmet>
       <h1>CO2 Data</h1>
+      {loading ? ( <Loader /> ) : (
       <div className="chart-container">
         <Line data={chartData} />
       </div>
+      )}
       <p>Carbon dioxide (CO2) is an important heat-trapping gas, also known as a greenhouse gas, that comes from the extraction and burning of fossil fuels (such as coal, oil, and natural gas), from wildfires, and natural processes like volcanic eruptions.</p>
       <p>Since the onset of industrial times in the 18th century, human activities have raised atmospheric CO2 by 50% – meaning the amount of CO2 is now 150% of its value in 1750. This human-induced rise is greater than the natural increase observed at the end of the last ice age 20,000 years ago.</p>
       <p>For more information, please check <a href="https://climate.nasa.gov/vital-signs/carbon-dioxide/?intent=121" target='_blank' rel="noreferrer">Nasa</a>.</p>
