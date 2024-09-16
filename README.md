@@ -2,8 +2,7 @@
 
 A multi-page web application built with React that visualizes global warming data using various APIs. The app provides a simple and responsive dashboard with graphs showcasing temperature changes, CO2 levels, methane emissions, NO2 emissions, and polar ice extent.
 
-![screenshot](![image](https://github.com/user-attachments/assets/bec08f38-467c-4c0c-8860-7a18f7260663)
-)
+![image](https://github.com/user-attachments/assets/bec08f38-467c-4c0c-8860-7a18f7260663)
 
 ## Features
 
