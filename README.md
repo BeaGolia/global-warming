@@ -94,3 +94,6 @@ To deploy on GitHub Pages:
 ## Credits
 Data provided by [Global Warming API](https://global-warming.org/).
 Background information from [National Geographic](https://education.nationalgeographic.org/resource/global-warming/), [Nasa](https://earthobservatory.nasa.gov/world-of-change/global-temperatures) and [EPA](https://www.epa.gov/ghgemissions/overview-greenhouse-gases#:~:text=The%20impact%20of%201%20pound,1%20pound%20of%20carbon%20dioxide.&text=Globally%2C%2040%25%20of%20total%20N,emissions%20come%20from%20human%20activities.&text=Nitrous%20oxide%20is%20emitted%20from,and%20other%20activities%2C%20described%20below.).
+
+## Link
+[Project](https://beagolia.github.io/global-warming/).
