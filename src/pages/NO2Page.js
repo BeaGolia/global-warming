@@ -43,10 +43,13 @@ function NO2Page() {
         <Line data={chartData} />
       </div>
       )}
-      <p>In 2022, nitrous oxide (N2O) accounted for 6% of all U.S. greenhouse gas emissions from human activities. Human activities such as agriculture, fuel combustion, wastewater management, and industrial processes are increasing the amount of N2O in the atmosphere. </p>
-      <p>Nitrous oxide molecules stay in the atmosphere for an average of 121 years before being removed by a sink or destroyed through chemical reactions. The impact of 1 pound of N2O on warming the atmosphere is 265 times that of 1 pound of carbon dioxide.</p>
-      <p>Globally, 40% of total N2O emissions come from human activities.</p>
-      <p>For more information, please check <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases#:~:text=The%20impact%20of%201%20pound,1%20pound%20of%20carbon%20dioxide.&text=Globally%2C%2040%25%20of%20total%20N,emissions%20come%20from%20human%20activities.&text=Nitrous%20oxide%20is%20emitted%20from,and%20other%20activities%2C%20described%20below." target='_blank' rel="noreferrer">EPA</a>.</p>
+      <p>Nitrogen Dioxide (NO2) is one of a group of highly reactive gases known as oxides of nitrogen or nitrogen oxides (NOx). </p>
+      <p>NO2 primarily gets in the air from the burning of fuel. NO2 forms from emissions from cars, trucks and buses, power plants, and off-road equipment.</p>
+      <p>Breathing air with a high concentration of NO2 can irritate airways in the human respiratory system. Such exposures over short periods can aggravate respiratory diseases.</p>
+      <p>NO2 and other NOx interact with water, oxygen and other chemicals in the atmosphere to form acid rain. Acid rain harms sensitive ecosystems such as lakes and forests.
+        The nitrate particles that result from NOx make the air hazy and difficult to see though. 
+        Finally, NOx in the atmosphere contributes to nutrient pollution in coastal waters.</p>
+      <p>For more information, please check <a href="https://www.epa.gov/no2-pollution/basic-information-about-no2" target='_blank' rel="noreferrer">EPA</a>.</p>
     </div>
   );
 }
